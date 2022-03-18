@@ -13,6 +13,8 @@ namespace tpmodul4_1302200124
             HaloGeneric<string> halo = new HaloGeneric<string>();
             String x = " Hilmi Fadhillah Cahyadi";
             halo.SapaUser(x);
+            DataGeneric<String> data = new DataGeneric<string>("1302200124");
+            data.PrintData();
         }
     }
     public class HaloGeneric<T>
@@ -20,6 +22,18 @@ namespace tpmodul4_1302200124
         public void SapaUser(T x)
         {
             Console.WriteLine("Halo" + x);
+        }
+    }
+    public class DataGeneric<T>
+    {
+        private T data;
+        public DataGeneric(T data)
+        {
+            this.data = data;
+        }
+        public void PrintData()
+        {
+            Console.WriteLine("data yang tersimpan adalah: " + this.data);
         }
     }
 }
